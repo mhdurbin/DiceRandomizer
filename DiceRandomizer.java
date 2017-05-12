@@ -1,3 +1,5 @@
+package DiceRandomizer;
+
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 import java.util.Random;
