@@ -8,6 +8,7 @@ import java.util.Random;
  * Next task is to improve upon the (Pseudo) Random number generator
  * May want to look at timing/efficiency of the program
  * May want to consider a GUI or some other interface
+ * May want to set up multiple dice type rolls
  * Another possible task is to implement this in a situation of inheritance for a DND Character sheet
  */
 
@@ -77,9 +78,20 @@ public class DiceRandomizer {
 		String radixString = null;
 		
 		String numberOfDice = JOptionPane.showInputDialog(null, "How many dice would you like rolled?", JOptionPane.QUESTION_MESSAGE);
+		
+		if (numberOfDice == null) {
+			JOptionPane.showMessageDialog(null, "The program has been cancelled.");
+			System.exit(0);
+		}
+		
 		diceNum = Integer.parseInt(numberOfDice);
 		
 		String typeOfDice = JOptionPane.showInputDialog(null, "What type of dice would you like rolled? (d4 = 4, d6 = 6, etc)", JOptionPane.QUESTION_MESSAGE);
+		
+		if (typeOfDice == null) {
+			JOptionPane.showMessageDialog(null, "The program has been cancelled.");
+			System.exit(0);
+		}
 		
 		// The if statement is to determine the size of the dice being used
 		
