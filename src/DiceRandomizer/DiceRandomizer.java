@@ -27,10 +27,10 @@ public class DiceRandomizer {
 		}
 		// Gets the range, using long to avoid overflow problems
 		long range = (long)endRange - (long)startRange + 1;
-		// Computes a fraction of the range
-		long fraction = (long)(range*randomVal.nextDouble());
+		// Computes a frac of the range
+		long frac = (long)(range*randomVal.nextDouble());
 		
-		int randomNum = (int)(fraction + startRange);
+		int randomNum = (int)(frac + startRange);
 		
 		return randomNum;
 	}
