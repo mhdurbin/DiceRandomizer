@@ -64,11 +64,13 @@ public class DiceRandomizer {
 				sum += randomNumArray[j];
 			}
 			Arrays.sort(randomNumArray);
-			if (dndStats.equals("Yes")) {
+			if (dndStats.equals("No")) {
+				System.out.println("Roll " + (i+1) + " " + Arrays.toString(randomNumArray));
+			}else {
 				sum = sum - randomNumArray[0];
+				System.out.print("Roll " + (i+1) + " " + Arrays.toString(randomNumArray));
+				System.out.println(" : Sum of Roll " + (i+1) + " is " + sum);
 			}
-			System.out.print("Roll " + (i+1) + " " + Arrays.toString(randomNumArray));
-			System.out.println(" : Sum of Roll " + (i+1) + " is " + sum);
 			sum = 0;		
 		}
 		
